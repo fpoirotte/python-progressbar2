@@ -1,6 +1,4 @@
-# One test fails on all arches, and two on arm. Issue filed:
-# https://github.com/WoLpH/python-progressbar/issues/182
-%bcond_with tests
+%bcond_without tests
 
 %global srcname progressbar2
 
@@ -15,7 +13,7 @@ The progressbar module is very easy to use, yet very powerful. It will also
 automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
-Version:        3.38.0
+Version:        3.39.2
 Release:        1%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
@@ -85,6 +83,10 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Wed Dec 19 2018 Ankur Sinha <ankursinha AT fedoraproject DOT org> - 3.39.2-1
+- Update to latest upstream commit
+- Should fix failing tests
+
 * Thu Dec 13 2018 Ankur Sinha <ankursinha AT fedoraproject DOT org> - 3.38.0-1
 - Check tests and file issue upstream
 - Initial build
