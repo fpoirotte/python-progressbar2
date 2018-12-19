@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.39.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -50,6 +50,7 @@ BuildRequires:  %{py3_dist freezegun} >= 0.3.10
 
 # obsolete python-progressbar
 Obsoletes:      python3-progressbar < 2.3-14
+Provides:       python3-progressbar == %{version}
 
 %{?python_provide:%python_provide python3-%{srcname}}
 
@@ -83,6 +84,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Wed Dec 19 2018 Petr Viktorin <pviktori@redhat.com> - 3.39.2-2
+- Provide python3-progressbar
+
 * Wed Dec 19 2018 Ankur Sinha <ankursinha AT fedoraproject DOT org> - 3.39.2-1
 - Update to latest upstream commit
 - Should fix failing tests
