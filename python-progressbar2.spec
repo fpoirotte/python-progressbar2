@@ -13,8 +13,8 @@ The progressbar module is very easy to use, yet very powerful. It will also
 automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
-Version:        3.39.2
-Release:        3%{?dist}
+Version:        3.39.3
+Release:        1%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -84,6 +84,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Wed Apr 10 2019 Ankur Sinha <ankursinha AT fedoraproject DOT org> - 3.39.3-1
+- Update to 3.39.3
+
 * Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 3.39.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
