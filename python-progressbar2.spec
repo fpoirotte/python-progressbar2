@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.39.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -38,10 +38,8 @@ BuildRequires:  %{py3_dist setuptools}
 BuildRequires:  %{py3_dist sphinx}
 BuildRequires:  %{py3_dist pytest}
 BuildRequires:  %{py3_dist pytest-cov}
-BuildRequires:  %{py3_dist pytest-cache}
 BuildRequires:  %{py3_dist pytest-runner}
 BuildRequires:  %{py3_dist pytest-flakes}
-BuildRequires:  %{py3_dist pytest-cache}
 BuildRequires:  %{py3_dist pytest-pep8}
 BuildRequires:  %{py3_dist flake8}
 %if %{with tests}
@@ -84,6 +82,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Sun May 12 2019 Orion Poplawski <orion@nwra.com> - 3.39.3-2
+- Drop unneeded BR on pytest-cache
+
 * Wed Apr 10 2019 Ankur Sinha <ankursinha AT fedoraproject DOT org> - 3.39.3-1
 - Update to 3.39.3
 
