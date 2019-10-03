@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.39.3
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -82,6 +82,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Thu Oct 03 2019 Miro Hrončok <mhroncok@redhat.com> - 3.39.3-5
+- Rebuilt for Python 3.8.0rc1 (#1748018)
+
 * Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 3.39.3-4
 - Rebuilt for Python 3.8
 
