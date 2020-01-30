@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.39.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -82,6 +82,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.39.3-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Thu Oct 03 2019 Miro Hrončok <mhroncok@redhat.com> - 3.39.3-5
 - Rebuilt for Python 3.8.0rc1 (#1748018)
 
