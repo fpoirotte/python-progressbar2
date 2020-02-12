@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.39.3
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -39,9 +39,6 @@ BuildRequires:  %{py3_dist sphinx}
 BuildRequires:  %{py3_dist pytest}
 BuildRequires:  %{py3_dist pytest-cov}
 BuildRequires:  %{py3_dist pytest-runner}
-BuildRequires:  %{py3_dist pytest-flakes}
-BuildRequires:  %{py3_dist pytest-pep8}
-BuildRequires:  %{py3_dist flake8}
 %if %{with tests}
 BuildRequires:  %{py3_dist freezegun} >= 0.3.10
 %endif
@@ -78,10 +75,15 @@ rm -rfv tests/__pycache__/
 %files -n python3-%{srcname}
 %license LICENSE
 %doc README.rst CHANGES.rst CONTRIBUTING.rst
-%{python3_sitelib}/%{srcname}-%{version}-py3.?.egg-info
+%{python3_sitelib}/%{srcname}-%{version}-py3.*.egg-info/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Wed Feb 12 2020 Petr Viktorin <pviktori@redhat.com> - 3.39.3-7
+- Remove linting BuildRequires
+  https://bugzilla.redhat.com/show_bug.cgi?id=1795451
+- Fix egg-info glob to work for Python 3.10+
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.39.3-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
