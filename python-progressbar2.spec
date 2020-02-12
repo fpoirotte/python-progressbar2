@@ -13,8 +13,8 @@ The progressbar module is very easy to use, yet very powerful. It will also
 automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
-Version:        3.39.3
-Release:        7%{?dist}
+Version:        3.47.0
+Release:        1%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -79,6 +79,14 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Wed Feb 12 2020 Petr Viktorin <pviktori@redhat.com> - 3.47.0-1
+- Update to latest upstream version
+  https://github.com/WoLpH/python-progressbar/compare/v3.39.3...vv3.47.0
+  Highlights:
+  - Rate limiting
+  - Added proper support for non-terminal output
+  - Add MultiProgressBar
+
 * Wed Feb 12 2020 Petr Viktorin <pviktori@redhat.com> - 3.39.3-7
 - Remove linting BuildRequires
   https://bugzilla.redhat.com/show_bug.cgi?id=1795451
