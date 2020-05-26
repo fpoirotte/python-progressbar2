@@ -14,7 +14,7 @@ automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
 Version:        3.47.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -79,6 +79,9 @@ rm -rfv tests/__pycache__/
 %{python3_sitelib}/progressbar
 
 %changelog
+* Tue May 26 2020 Miro Hrončok <mhroncok@redhat.com> - 3.47.0-2
+- Rebuilt for Python 3.9
+
 * Wed Feb 12 2020 Petr Viktorin <pviktori@redhat.com> - 3.47.0-1
 - Update to latest upstream version
   https://github.com/WoLpH/python-progressbar/compare/v3.39.3...vv3.47.0
