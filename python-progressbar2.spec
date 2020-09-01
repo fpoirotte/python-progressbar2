@@ -13,8 +13,8 @@ The progressbar module is very easy to use, yet very powerful. It will also
 automatically enable features like auto-resizing when the system supports it.}
 
 Name:           python-%{srcname}
-Version:        3.51.4
-Release:        2%{?dist}
+Version:        3.52.1
+Release:        1%{?dist}
 Summary:        A Progressbar library to provide visual progress to long running operations
 
 
@@ -78,6 +78,13 @@ PYTHONPATH=. %pytest tests
 %{python3_sitelib}/progressbar
 
 %changelog
+* Tue Sep 01 2020 Petr Viktorin <pviktori@redhat.com> - 3.52.1-1
+- Update to 3.52.1
+  Resolves: https://bugzilla.redhat.com/show_bug.cgi?id=1873701
+  The only behavior change is that ProgressBar gets a `start_time`
+  keyword argument, which can override the starting time (e.g. for
+  ETA calculations).
+
 * Wed Jul 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.51.4-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
